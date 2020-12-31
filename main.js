@@ -1,5 +1,5 @@
 let prompt = require('prompt-sync')({sigint: true});
- let hours_user = prompt("Hours user spend");
+ let hours_user = prompt("Hours user spend ");
  let check_member = prompt("Press 1 if you are a Member....Press 2 if you are not ");
  
    let x=1;
@@ -16,7 +16,7 @@ let prompt = require('prompt-sync')({sigint: true});
 
  }
 else if (check_member==y){
-    let hours_user = prompt("Connection problem.... try again ");
+    let hours_user = prompt("Connection problem.... Press again the Hours user spend ");
     hours_user = parseFloat(hours_user * 5);
     tax=20
     
