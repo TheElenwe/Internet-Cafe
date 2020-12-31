@@ -1,6 +1,7 @@
 let prompt = require('prompt-sync')({sigint: true});
+let check_member = prompt("Press 1 if you are a Member....Press 2 if you are not ");
  let hours_user = prompt("Hours user spend ");
- let check_member = prompt("Press 1 if you are a Member....Press 2 if you are not ");
+ 
  
    let x=1;
    let y=2;
