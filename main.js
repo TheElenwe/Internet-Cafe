@@ -1,27 +1,12 @@
-let prompt = require('prompt-sync')({sigint: true});
-let check_member = prompt("Press 1 if you are a Member....Press 2 if you are not ");
- let hours_user = prompt("Hours user spend ");
- 
- 
-   let x=1;
-   let y=2;
-  hours_user = parseFloat(hours_user * 2);
-  check_member = parseFloat(check_member);
+let readlineSync = require("readline-sync");
 
-  if(check_member==x){
-  tax=10
-  total_amount=(hours_user *tax) /100
- 
-  total =(hours_user +total_amount)
-   console.log(total)
+let hoursSpent = readlineSync.question("Please input how many hours you have spent \n");
+let memberStatus = readlineSync.question("Input yes if you're a member, no if you're not. \n");
 
- }
-else if (check_member==y){
-    let hours_user = prompt("Connection problem.... Press again the Hours user spend ");
-    hours_user = parseFloat(hours_user * 5);
-    tax=20
-    
-    total_amount=(hours_user *tax) / 100
-    total=(hours_user + total_amount)
-    console.log(total)
+if (memberStatus === "yes") {
+  console.log(hoursSpent * 2 * 1.1);
+} else if (memberStatus === "no") {
+  console.log(hoursSpent * 5 * 1.2);
+} else {
+  console.log("Input not valid.");
 }
